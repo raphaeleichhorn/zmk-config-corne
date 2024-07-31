@@ -18,14 +18,14 @@
                         #binding-cells = <0>;
                         bindings = <&kp BKSP>, <&kp LBKT>;
                         mods = <(MOD_LALT|MOD_RALT)>;
-                }
+                };
                 
                 BKSP_DEL_UE: backspace_delete_ue {
                         compatible = "zmk,behaviour-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&DEL_UE>, <&kp DELETE>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
-                }
+                };
 
 // Mod for adding exclamation point to oe umlaut
                 OE_EXC: oe_exclamation {
@@ -33,7 +33,7 @@
                         #binding-cells = <0>;
                         bindings = <&kp SEMI>, <&kp RBRC>; 
                         mods = <(MOD_LSFT|MOD_RSFT)>;
-                }
+                };
 
 // Mod for adding question mark to ae umlaut
                 AE_Q: ae_questionmark {
@@ -41,8 +41,8 @@
                         #binding-cells = <0>;
                         bindings = <&kp SQT>, <&kp UNDER>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
-                }
-        }
+                };
+        };
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
