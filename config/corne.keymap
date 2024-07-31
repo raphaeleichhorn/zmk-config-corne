@@ -11,17 +11,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        behaviours {
+        behaviors {
 // Chained mods for backspace, delete on shift and umlaut ue on alt on same key
                 DEL_UE: delete_ue {
-                        compatible = "zmk,behaviour-mod-morph";
+                        compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp BKSP>, <&kp LBKT>;
                         mods = <(MOD_LALT|MOD_RALT)>;
                 };
                 
                 BKSP_DEL_UE: backspace_delete_ue {
-                        compatible = "zmk,behaviour-mod-morph";
+                        compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&DEL_UE>, <&kp DELETE>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -29,7 +29,7 @@
 
 // Mod for adding exclamation point to oe umlaut
                 OE_EXC: oe_exclamation {
-                        compatible = "zmk,behaviour-mod-morph";
+                        compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp SEMI>, <&kp RBRC>; 
                         mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -37,7 +37,7 @@
 
 // Mod for adding question mark to ae umlaut
                 AE_Q: ae_questionmark {
-                        compatible = "zmk,behaviour-mod-morph";
+                        compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp SQT>, <&kp UNDER>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
