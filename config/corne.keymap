@@ -27,7 +27,7 @@
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
 
-// Mod for adding exclamation point to oe umlaut
+// Mod for adding exclamation point and slash to oe umlaut
                 OE_EXC: oe_exclamation {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
@@ -35,13 +35,44 @@
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
 
-// Mod for adding question mark to ae umlaut
+                OE_EXC_SL: oe_exclamation_slash {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <OE_EXC>, <&kp AMPS>; 
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                };                
+
+// Mod for adding question mark and backslash to ae umlaut
                 AE_Q: ae_questionmark {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp SQT>, <&kp UNDER>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
+                
+                AE_Q_BSL: ae_questionmark_backslash {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&AE_Q>, <&kp RA(NUBS)>;
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                };
+
+
+// Mod for adding < to comma
+                COM_PBRO: comma_pbropen {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp COMMA>, <&kp NUBS>;
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                };
+// Mod for adding > to dot
+                DOT_PBRC: dot_pbrclosed {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp DOT>, <&kp LS(NUBS);
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                };                
+
         };
 
         conditional_layers {
@@ -60,27 +91,27 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P   | BKSP_DEL_UE |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |OE_EXC| AE_Q |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -   | RSHFT|
+// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,< |  .> |  -   | RSHFT|
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &BKSP_DEL_UE
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G       &kp H &kp J  &kp K     &kp L   &OE_EXC  &AE_Q
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &lt 1 ESC &kp SPACE   &kp RET &mo 2 &kp LALT
+   &kp TAB   &kp Q &kp W &kp E    &kp R &kp T       &kp Y   &kp U  &kp I        &kp O        &kp P    &BKSP_DEL_UE
+   &kp LCTRL &kp A &kp S &kp D    &kp F &kp G       &kp H   &kp J  &kp K        &kp L        &OE_EXC  &AE_Q
+   &kp LSHFT &kp Z &kp X &kp C    &kp V &kp B       &kp N   &kp M  &kp COM_PBRO &kp DOT_PBRC &kp FSLH &kp RSHFT
+                         &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2  &kp LALT
                         >;
                 };      
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB | HOM |  UP | END |PGUP |     |   |  /  |  7  |  8  |  9  |  -  | BKSP_DEL_UE |
-// | CTRL | LFT | DWN | RGT |PGDN |C_MUT|   |  *  |  4  |  5  |  6  |  +  |  =  |
-// | SHFT |AltTb| BKSP| DEL |     |C_PP |   | CAPS|  1  |  2  |  3  |  .  | ENT |
-//                    | GUI |     | SPC |   | ENT |     |  0  |
+// |  TAB | HOM |  UP | END |PGUP |BK_DEL|   |  /  |  7  |  8  |  9  |  -  | BKSP_DEL_UE |
+// | CTRL | LFT | DWN | RGT |PGDN | ENT  |   |  *  |  4  |  5  |  6  |  +  |  =  |
+// | SHFT |AlTab|     |C_MUT|C_PP | ESC  |   | CAPS|  1  |  2  |  3  |  .  | ENT |
+//                    | GUI |     | SPC  |   | ENT |     |  0  |
                         bindings = <
-   &kp TAB   &kp HOME      &kp UP     &kp END    &kp PG_UP    &trans              &kp KP_DIVIDE   &kp N7  &kp N8  &kp N9  &kp KP_MINUS &BKSP_DEL_UE
-   &kp LCTRL &kp LEFT      &kp DOWN   &kp RIGHT  &kp PG_DN    &kp C_MUTE          &kp KP_MULTIPLY &kp N4  &kp N5  &kp N6  &kp KP_PLUS  &kp KP_EQUAL
-   &kp LSHFT &kp LA(TAB) &kp BKSP   &kp DEL    &trans       &kp C_PLAY_PAUSE    &kp CAPS        &kp N1  &kp N2  &kp N3  &kp KP_DOT   &kp KP_ENTER
-                                      &kp LGUI   &trans       &kp SPACE           &kp RET         &trans  &kp N0
+   &kp TAB   &kp HOME     &kp UP     &kp END    &kp PG_UP        &kp BKSP_DEL_UE    &kp KP_DIVIDE   &kp N7  &kp N8  &kp N9  &kp KP_MINUS &BKSP_DEL_UE
+   &kp LCTRL &kp LEFT     &kp DOWN   &kp RIGHT  &kp PG_DN        &kp RET            &kp KP_MULTIPLY &kp N4  &kp N5  &kp N6  &kp KP_PLUS  &kp RPAR
+   &kp LSHFT &kp LA(TAB)  &trans     &kp C_MUTE &kp C_PLAY_PAUSE &ESC               &kp CAPS        &kp N1  &kp N2  &kp N3  &kp KP_DOT   &kp KP_ENTER
+                                     &kp LGUI   &trans           &kp SPACE          &kp RET         &trans  &kp N0
                         >;
                 };
 
@@ -92,7 +123,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB   &kp PLUS  &kp AT        &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK      &kp LPAR     &kp RPAR     &kp EQUAL
-   &kp LCTRL &trans    &kp MINUS     &trans   &trans   &trans       &trans    &trans    &kp RA(LBKT)   &kp RA(RBKT) &kp NUBS     &kp RA(EQUAL)
+   &kp LCTRL &trans    &kp MINUS     &trans   &trans   &trans       &trans    &trans    &kp RA(LBKT)   &kp RA(RBKT) &kp RA(NUBS) &kp RA(EQUAL)
    &kp LSHFT &trans    &kp RA(N2)    &trans   &trans   &trans       &trans    &trans    &kp RA(SQT)    &kp RA(BSLH) &kp RA(N7)   &kp TILDE
                                  &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp LALT
                         >;
