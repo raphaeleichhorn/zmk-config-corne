@@ -38,7 +38,7 @@
                 OE_EXC_SL: oe_exclamation_slash {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <OE_EXC>, <&kp AMPS>; 
+                        bindings = <&OE_EXC>, <&kp AMPS>; 
                         mods = <(MOD_LALT|MOD_RALT)>;
                 };                
 
@@ -89,9 +89,9 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P   | BKSP_DEL_UE |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |OE_EXC| AE_Q |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,< |  .> |  -   | RSHFT|
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P      | BKSP_DEL_UE |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |OE_EXC_SL| AE_Q_BSL |
+// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,< |  .> |  -      | RSHFT|
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E    &kp R &kp T       &kp Y   &kp U  &kp I        &kp O        &kp P    &BKSP_DEL_UE
