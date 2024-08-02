@@ -73,13 +73,13 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB | HOM |  UP | END |PGUP |     |   |  /  |  7  |  8  |  9  |  -  | BKSP_DEL_UE |
-// | CTRL | LFT | DWN | RGT |PGDN |K_MUT|   |  *  |  4  |  5  |  6  |  +  |  =  |
-// | SHFT |AltTb| BKSP| DEL |     |K_PP |   | CAPS|  1  |  2  |  3  |  .  | ENT |
+// | CTRL | LFT | DWN | RGT |PGDN |C_MUT|   |  *  |  4  |  5  |  6  |  +  |  =  |
+// | SHFT |AltTb| BKSP| DEL |     |C_PP |   | CAPS|  1  |  2  |  3  |  .  | ENT |
 //                    | GUI |     | SPC |   | ENT |     |  0  |
                         bindings = <
    &kp TAB   &kp HOME      &kp UP     &kp END    &kp PG_UP    &trans              &kp KP_DIVIDE   &kp N7  &kp N8  &kp N9  &kp KP_MINUS &BKSP_DEL_UE
-   &kp LCTRL &kp LEFT      &kp DOWN   &kp RIGHT  &kp PG_DN    &kp K_MUTE          &kp KP_MULTIPLY &kp N4  &kp N5  &kp N6  &kp KP_PLUS  &kp KP_EQUAL
-   &kp LSHFT &kp LA(TAB) &kp BKSP   &kp DEL    &trans       &kp K_PLAY_PAUSE    &kp CAPS        &kp N1  &kp N2  &kp N3  &kp KP_DOT   &kp KP_ENTER
+   &kp LCTRL &kp LEFT      &kp DOWN   &kp RIGHT  &kp PG_DN    &kp C_MUTE          &kp KP_MULTIPLY &kp N4  &kp N5  &kp N6  &kp KP_PLUS  &kp KP_EQUAL
+   &kp LSHFT &kp LA(TAB) &kp BKSP   &kp DEL    &trans       &kp C_PLAY_PAUSE    &kp CAPS        &kp N1  &kp N2  &kp N3  &kp KP_DOT   &kp KP_ENTER
                                       &kp LGUI   &trans       &kp SPACE           &kp RET         &trans  &kp N0
                         >;
                 };
