@@ -47,8 +47,8 @@
         conditional_layers {
                 compatible = "zmk,conditional-layers";
                 tri-layer {
-                        if-layers = <3 4>;
-                        then-layer = <5>;
+                        if-layers = <1 2>;
+                        then-layer = <3>;
                 };
         };
 
@@ -66,37 +66,9 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U  &kp I     &kp O   &kp P    &BKSP_DEL_UE
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G       &kp H &kp J  &kp K     &kp L   &OE_EXC  &AE_Q
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &lt 3 ESC &kp SPACE   &kp RET &mo 4 &kp LALT
+                  &kp LGUI &lt 1 ESC &kp SPACE   &kp RET &mo 2 &kp LALT
                         >;
-                };
-
-                gaming_layer1 {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P   | BKSP_DEL_UE |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |OE_EXC| AE_Q |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -   | RSHFT|
-//                    | GUI | GL2 | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P    &BKSP_DEL_UE
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L   &OE_EXC  &AE_Q
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &lt 2 ESC &kp SPACE    &kp RET &mo 4 &kp LALT
-                        >;
-                };
-                
-                gaming_layer2 {
-// -----------------------------------------------------------------------------------------
-// |  §   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP_DEL_UE |
-// | CTRL |     |     |     |     |K_MUT|   |     |     |     |     |     |     |
-// | SHFT |AltTb|     |     |     |K_PP |   |     |     |     |     |     | DEF |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp GRAVE &kp N1        &kp N2    &kp N3     &kp N4     &kp N5              &kp N6    &kp N7   &kp N8   &kp N9  &kp N0  &BKSP_DEL_UE
-   &kp LCTRL &trans        &trans    &trans     &trans     &kp K_MUTE          &trans    &trans   &trans   &trans  &trans  &trans
-   &kp LSHFT &kp LALT(TAB) &trans    &trans     &trans     &kp K_PLAY_PAUSE    &trans    &trans   &trans   &trans  &trans  &tog 0
-                                     &kp LGUI   &trans     &kp SPACE           &kp RET   &trans   &kp LALT
-                        >;
-                };       
+                };      
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -129,12 +101,12 @@
                 tri_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |     |     |     |     |     |   |     |     |     |     |     |     |
-// | CTRL |     |     |     |     | GL1 |   |     |     |     |     |     |     |
+// | CTRL |     |     |     |     |     |   |     |     |     |     |     |     |
 // | SHFT |     |     |     |     |     |   | BT1 | BT2 | BT3 | BT4 | BT5 |BTCLR|
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &trans   &trans &trans   &trans   &trans       &trans   &trans   &trans &trans    &trans &trans
-   &kp LCTRL &trans   &trans &trans   &trans   &tog 1       &trans   &trans   &trans &trans    &trans &trans
+   &kp LCTRL &trans   &trans &trans   &trans   &trans       &trans   &trans   &trans &trans    &trans &trans
    &kp LSHFT &trans   &trans &trans   &trans   &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
                              &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp LALT
                         >;
