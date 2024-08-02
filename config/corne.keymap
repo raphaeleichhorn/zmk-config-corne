@@ -69,7 +69,7 @@
                 DOT_PBRC: dot_pbrclosed {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp DOT>, <&kp LS(NUBS);
+                        bindings = <&kp DOT>, <&kp LS(NUBS)>;
                         mods = <(MOD_LALT|MOD_RALT)>;
                 };                
 
