@@ -119,12 +119,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  +  |  "  |  *  |  ç  |  %  |   |  &  |  /  |  (  |  )  |  =  |  ^   |
 // | CTRL |     |  '  |     |     |     |   |     |     |  [  |  ]  |  \  |  ~   |
-// | SHFT |     |  @  |     |     |     |   |     |     |  {  |  }  | "|" |  °   |
+// | SHFT |     |  @  |  $  |     |     |   |     |     |  {  |  }  | "|" |  °   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB   &kp PLUS  &kp AT        &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK      &kp LPAR     &kp RPAR     &kp EQUAL
    &kp LCTRL &trans    &kp MINUS     &trans   &trans   &trans       &trans    &trans    &kp RA(LBKT)   &kp RA(RBKT) &kp RA(NUBS) &kp RA(EQUAL)
-   &kp LSHFT &trans    &kp RA(N2)    &trans   &trans   &trans       &trans    &trans    &kp RA(SQT)    &kp RA(BSLH) &kp RA(N7)   &kp TILDE
+   &kp LSHFT &trans    &kp RA(N2)    &kp BSLH &trans   &trans       &trans    &trans    &kp RA(SQT)    &kp RA(BSLH) &kp RA(N7)   &kp TILDE
                                  &kp LGUI &trans   &kp SPACE    &kp RET   &trans    &kp LALT
                         >;
                 };
