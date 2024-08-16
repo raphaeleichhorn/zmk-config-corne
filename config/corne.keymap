@@ -118,13 +118,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  +  |  "  |  *  |  ç  |  %  |   |  &  |  /  |  (  |  )  |  =  |  ^   |
-// | CTRL |  °  |  @  |PG_UP|PG_DN|     |   |     |     |  [  |  ]  | "|" |  '   |
-// | SHFT | CAPS|     |BACK |FWD  |     |   |     |     |  {  |  }  |  $  |  ~   |
+// | CTRL |  °  |  @  |  #  |     |PG_UP|   |     |     |  [  |  ]  | "|" |  '   |
+// | SHFT | CAPS|     |BACK |FWD  |PG_DN|   |     |     |  {  |  }  |  $  |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &kp PLUS  &kp AT     &kp HASH      &kp DLLR          &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK      &kp LPAR     &kp RPAR     &kp EQUAL
-   &kp LCTRL &kp TILDE &kp RA(N2) &kp PG_UP     &kp PG_DN         &none        &none     &none     &kp RA(LBKT)   &kp RA(RBKT) &kp RA(N7)   &kp MINUS
-   &kp LSHFT &kp CAPS  &none      &kp C_AC_BACK &kp C_AC_FORWARD  &none        &none     &none     &kp RA(SQT)    &kp RA(BSLH) &kp BSLH     &kp RA(EQUAL)
+   &kp TAB   &kp PLUS  &kp AT     &kp HASH      &kp DLLR          &kp PRCNT        &kp CARET &kp AMPS  &kp ASTRK      &kp LPAR     &kp RPAR     &kp EQUAL
+   &kp LCTRL &kp TILDE &kp RA(N2) &kp RA(N3)    &none             &kp PG_UP        &none     &none     &kp RA(LBKT)   &kp RA(RBKT) &kp RA(N7)   &kp MINUS
+   &kp LSHFT &kp CAPS  &none      &kp C_AC_BACK &kp C_AC_FORWARD  &kp PG_DN        &none     &none     &kp RA(SQT)    &kp RA(BSLH) &kp BSLH     &kp RA(EQUAL)
                                   &kp LGUI      &trans            &kp SPACE    &kp RET   &trans    &kp LALT
                         >;
                 };
