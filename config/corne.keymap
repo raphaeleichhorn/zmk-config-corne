@@ -136,11 +136,11 @@
 // | CTRL | F11 | F12 |     |     |     |   |     |     |     |     |     |     |
 // | SHFT |     |     |     |     |     |   | BT1 | BT2 | BT3 | BT4 | BT5 |BTCLR|
 //                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = < 
-   &kp  TAB  &none  &none &none    &none   &none       &none        &none        &none        &none        &none        &none
-   &kp LCTRL &none  &none &none    &none   &none       &none        &none        &none        &none        &none        &none
-   &kp LSHFT &none  &none &none    &none   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-                          &kp LGUI &trans  &kp SPACE   &kp RET      &trans       &kp LALT
+                        bindings = <
+   &kp  TAB  &kp F1  &kp F2  &kp F3   &kp F4  &kp F5      &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &none
+   &kp LCTRL &kp F11 &kp F12 &none    &none   &none       &none        &none        &none        &none        &none        &none
+   &kp LSHFT &none   &none   &none    &none   &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+                             &kp LGUI &trans  &kp SPACE   &kp RET      &trans       &kp LALT
                         >;
                 };
 
