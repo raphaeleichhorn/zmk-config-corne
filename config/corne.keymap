@@ -91,12 +91,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Z  |  U   |  I  |  O  |  P      | BKSP_DEL_UE |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |OE_EXC_SL| AE_Q_BSL |
-// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,< |  .> |  -      | ENT |
+// | SHFT |  Y  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,< |  .> |  -      | SHFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E    &kp R &kp T       &kp Y   &kp U  &kp I       &kp O       &kp P      &BKSP_DEL_UE
    &kp LCTRL &kp A &kp S &kp D    &kp F &kp G       &kp H   &kp J  &kp K       &kp L       &OE_EXC_SL &AE_Q_BSL
-   &kp LSHFT &kp Z &kp X &kp C    &kp V &kp B       &kp N   &kp M  &COM_PBRO   &DOT_PBRC   &kp FSLH   &kp RET
+   &kp LSHFT &kp Z &kp X &kp C    &kp V &kp B       &kp N   &kp M  &COM_PBRO   &DOT_PBRC   &kp FSLH   &kp RSHFT
                          &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2  &kp LALT
                         >;
                 };      
